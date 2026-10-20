@@ -25,6 +25,8 @@ public class AuthController {
     private JwtUtil jwtUtil;
 
     @PostMapping("/login")
+    //retorna uma resposta para a aplicação, respondendo com um true ou false/ autenticação do usuário para atribuir um token para ele do JWT
+    //utilizando responseEntity
     public ResponseEntity<?> login(@RequestBody Usuario oUsuario) {
         
         Optional<Usuario> oUserEncontrado = usuarioRepository.findByLogin(oUsuario.getLogin());

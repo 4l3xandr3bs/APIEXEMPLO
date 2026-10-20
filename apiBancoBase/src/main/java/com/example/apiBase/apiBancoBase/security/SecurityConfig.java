@@ -8,7 +8,7 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 //Classe que configura as permissões de acesso, e
-//quais rotas precisam de autenticação ativando o filtro JWT
+//quais rotas precisam de autenticação ativando o filtro JWT(JSON Web Token)
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {

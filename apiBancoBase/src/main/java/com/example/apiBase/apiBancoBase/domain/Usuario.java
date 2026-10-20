@@ -1,5 +1,5 @@
 package com.example.apiBase.apiBancoBase.domain;
-
+//DOMAIN É A MESMA COISA DO QUE O ENTITY, PORÉM É UTILIZADO ESTE NOME QUANDO UTILIZAR APIs
 import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

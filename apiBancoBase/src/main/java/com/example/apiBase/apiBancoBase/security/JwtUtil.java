@@ -11,11 +11,12 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 
 //Classe voltada para gerar e validar os tokens de login JWT do usuario
+//JWT = trabalha a parte de login de usuários e requições
 @Component
 public class JwtUtil {
 
     // chave para gerar tokens
-    private static final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS512);
+    private static final SecretKey SECRET_KEY = Keys.secretKeyFor(SignatureAlgorithm.HS512);//algorítimo Hash
     private static final long EXPIRATION_TIME = 86400000; // em ms
 
     public String gerarToken(String login) {
@@ -25,7 +26,7 @@ public class JwtUtil {
                 .signWith(SignatureAlgorithm.HS512, SECRET_KEY)
                 .compact();
     }
-
+   
     public String getLoginFromToken(String token) {
         return Jwts.parser()
                 .setSigningKey(SECRET_KEY)
